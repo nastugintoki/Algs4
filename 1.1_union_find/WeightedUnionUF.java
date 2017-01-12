@@ -47,6 +47,18 @@ public class WeightedUnionUF {
         }
         return i;
     } 
-
+    
+    public static void main(String[] args) {
+		WeightedUnionUF uf = new WeightedUnionUF(10);
+		StdOut.println(uf.count() == 10);
+		uf.union(0, 1);
+		StdOut.println(uf.count() == 9);
+		uf.union(2, 3);
+		StdOut.println(uf.count() == 8);
+		uf.union(0, 2);
+		StdOut.println(uf.count() == 7);
+		uf.union(1, 3);
+		StdOut.println(uf.count() == 7);
+	}
 
 } 
